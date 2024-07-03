@@ -75,6 +75,7 @@ checksum = "72b3254f16251a8381aa12e40e3c4d2f0199f8c6508fbecb9d91f575e0fbb8c6"
 name = "basic"
 version = "0.1.0"
 dependencies = [
+ "example",
  "serde",
  "span",
  "tokio",
@@ -209,6 +210,10 @@ name = "either"
 version = "1.13.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "60b1af1c220855b6ceac025d3f6ecdd2b7c4894bfe9cd9bda4fbb4bc7c0d4cf0"
+
+[[package]]
+name = "example"
+version = "0.1.0"
 
 [[package]]
 name = "futures"
@@ -1084,25 +1089,8 @@ dependencies = [
 name = "span"
 version = "0.0.5"
 dependencies = [
- "bimap",
- "bincode",
- "derive_more",
- "futures",
- "hashbrown",
- "left-right",
- "ordered-float",
- "quinn",
- "rand",
- "rcgen",
- "rustls",
- "serde",
- "serde_bytes",
- "serde_millis",
- "span_macros 0.0.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "sysinfo",
- "tokio",
- "tracing",
- "uuid",
+ "span_macros 0.0.1",
+ "span_net",
 ]
 
 [[package]]
@@ -1125,6 +1113,31 @@ dependencies = [
  "quote",
  "quote2",
  "syn",
+]
+
+[[package]]
+name = "span_net"
+version = "0.0.5"
+dependencies = [
+ "bimap",
+ "bincode",
+ "derive_more",
+ "futures",
+ "hashbrown",
+ "left-right",
+ "ordered-float",
+ "quinn",
+ "rand",
+ "rcgen",
+ "rustls",
+ "serde",
+ "serde_bytes",
+ "serde_millis",
+ "span_macros 0.0.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "sysinfo",
+ "tokio",
+ "tracing",
+ "uuid",
 ]
 
 [[package]]

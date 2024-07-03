@@ -21,7 +21,8 @@ use raft::{ChannelId, Node, Role};
 use serde::{de::DeserializeOwned, Deserialize, Serialize};
 use tokio::sync::mpsc::{self, Receiver, Sender, UnboundedReceiver, UnboundedSender};
 use tracing::{debug, error, info, trace};
-use uuid::Uuid;
+
+pub use uuid::Uuid;
 
 #[derive(
 	Serialize,
@@ -37,7 +38,7 @@ use uuid::Uuid;
 	Deref,
 	DerefMut,
 )]
-pub struct Id(pub Uuid);
+struct Id(Uuid);
 
 enum Request {
 	Create {
@@ -59,7 +60,7 @@ pub struct Cluster {
 	res_rx: Receiver<Response>,
 }
 
-pub struct ChannelInfo {
+struct ChannelInfo {
 	tx: UnboundedSender<Vec<u8>>,
 	rx: UnboundedReceiver<Vec<u8>>,
 	status_write: WriteHandle<Status, StatusOp>,
@@ -192,7 +193,7 @@ impl Cluster {
 		Self { req_tx, res_rx }
 	}
 
-	pub async fn tick(node: &mut Node, endpoint: &mut Endpoint) {
+	async fn tick(node: &mut Node, endpoint: &mut Endpoint) {
 		endpoint.step().await;
 
 		node.peers = endpoint.peer_ids();
@@ -295,7 +296,7 @@ pub struct Status {
 }
 
 #[derive(Clone, Copy)]
-pub enum StatusOp {
+enum StatusOp {
 	State(State),
 	Term(usize),
 	Commit(usize),
