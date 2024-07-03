@@ -1,7 +1,7 @@
 
 [package]
 name = "span"
-version = "0.0.3"
+version = "0.0.3-fixreadme"
 edition = "2021"
 authors = ["Sol Midnight <sol.midnight@blockglow.com>"]
 description = "Networking crate implementing consensus."

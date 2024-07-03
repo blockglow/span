@@ -5,6 +5,7 @@ It is not complete yet, and not ready for experimental use; however, this is wha
 ```
 use span::*;
 
+#[data("62dc1b7c-6849-43a9-9f47-ecfc8ee1da0b")]
 pub enum Command {
 	Example(String)
 }
