@@ -28,7 +28,6 @@ use uuid::Uuid;
 pub struct PeerId(usize);
 
 const MAX_BACKOFF: u32 = 5;
-const DEADBEEF: u32 = 0xDEADBEEF;
 
 pub struct PartitionedPeer {
 	last_attempt: Instant,
