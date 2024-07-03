@@ -12,8 +12,8 @@ pub fn data(_attr: TokenStream, _item: TokenStream) -> TokenStream {
         #copy
 
         impl span::Datatype for #item_ident {
-            fn id() -> uuid::Uuid {
-                Uuid::from_str(#id).unwrap()
+            fn id() -> span::Uuid {
+                span::Uuid::from_str(#id).unwrap()
             }
         }
     };

@@ -75,6 +75,7 @@ checksum = "72b3254f16251a8381aa12e40e3c4d2f0199f8c6508fbecb9d91f575e0fbb8c6"
 name = "basic"
 version = "0.1.0"
 dependencies = [
+ "serde",
  "span",
  "tokio",
 ]
@@ -675,6 +676,23 @@ dependencies = [
 ]
 
 [[package]]
+name = "quote2"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "970573b86f7e5795c8c6c50c56ef602368593f0687188da27fd489a59e253630"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "quote2-macros",
+]
+
+[[package]]
+name = "quote2-macros"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5f4b89c37b2d870a28629ad20da669bb0e7d7214878d0d5111b304aa466e1977"
+
+[[package]]
 name = "rand"
 version = "0.8.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1064,7 +1082,7 @@ dependencies = [
 
 [[package]]
 name = "span"
-version = "0.0.2"
+version = "0.0.4"
 dependencies = [
  "bimap",
  "bincode",
@@ -1080,10 +1098,33 @@ dependencies = [
  "serde",
  "serde_bytes",
  "serde_millis",
+ "span_macros 0.0.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "sysinfo",
  "tokio",
  "tracing",
  "uuid",
+]
+
+[[package]]
+name = "span_macros"
+version = "0.0.1"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "quote2",
+ "syn",
+]
+
+[[package]]
+name = "span_macros"
+version = "0.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d2182ac3ddd1fa7e5385991a6a24cdaa432c243d67387b0a6eb517873913b5df"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "quote2",
+ "syn",
 ]
 
 [[package]]
