@@ -1,12 +1,13 @@
 
 [package]
 name = "span"
-version = "0.0.2"
+version = "0.0.3"
 edition = "2021"
 authors = ["Sol Midnight <sol.midnight@blockglow.com>"]
-description = "Networking crate implementing RAFT-Plus, MLRaft, and potentially hhRaft? Code is here but not fmt'd. hmm..."
+description = "Networking crate implementing consensus."
 repository = "https://github.com/blockglow/span"
 license = "MIT"
+readme = "CRATES.md"
 
 [dependencies]
 tokio = { version = "1.38.0", features = ["full"] }

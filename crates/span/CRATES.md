@@ -1,3 +1,8 @@
+Span is a networking library that currently implements advanced consensus (based on research papers).
+
+It is not complete yet, and not ready for experimental use; however, this is what the consensus API looks like as it stands:
+
+```
 use span::*;
 
 pub enum Command {
@@ -27,3 +32,4 @@ async fn main() {
 		}
 	}
 }
+```

@@ -1,5 +1,4 @@
 mod net;
 
-pub mod prelude {
-	pub use crate::net::{Cluster, Dataset};
-}
+pub use crate::net::{Cluster, Dataset};
+pub use span_macros::*;
